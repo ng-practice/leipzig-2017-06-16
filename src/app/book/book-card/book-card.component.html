@@ -1,0 +1,18 @@
+<!-- .thumbnail>img+.title+.authors+.price+.rating+.actions -->
+<div class="thumbnail">
+  <a [routerLink]="['book', data.isbn]">
+    <img src="{{ data.cover }}" width="250px" alt="">
+  </a>
+</div>
+<div class="title">{{ data.title }}</div>
+<div class="authors">{{ data.authors }}</div>
+<div class="price">{{ data.price }}</div>
+<div class="rating">{{ data.rating }}</div>
+<div class="actions">
+  <!-- .btn-group>button.btn.btn-default*2 -->
+  <div class="btn-group">
+    <button (click.once)="increment()" class="btn btn-default">+</button>
+    <button (click.once)="decrement()" class="btn btn-default">-</button>
+    <button (click.once)="deleteBook()" class="btn btn-warning">x</button>
+  </div>
+</div>
